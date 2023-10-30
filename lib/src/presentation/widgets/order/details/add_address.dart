@@ -81,7 +81,9 @@ class AddAddress extends StatelessWidget {
                   messageTextFormField: 'Please, type ur Address',
                   formRegExp: r'\w',
                 ),
-                smallSizedBox,
+                index != (bloc.state as AddAddressDetailsState).addressCount - 1
+                    ? smallSizedBox
+                    : SizedBox.shrink(),
               ],
             );
           },
