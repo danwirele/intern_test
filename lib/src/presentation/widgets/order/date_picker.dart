@@ -35,6 +35,9 @@ class _DatePickerState extends State<DatePicker> {
 
   @override
   Widget build(BuildContext context) {
+    final ColorScheme colorScheme = Theme.of(context).colorScheme;
+    final TextTheme textTheme = Theme.of(context).textTheme;
+
     return Padding(
       padding: const EdgeInsets.symmetric(
         horizontal: 20,
@@ -45,7 +48,7 @@ class _DatePickerState extends State<DatePicker> {
         children: [
           Text(
             'Start date',
-            style: Theme.of(context).textTheme.displayMedium,
+            style: textTheme.displayMedium,
           ),
           sizedBoxHeight,
           GestureDetector(
@@ -53,8 +56,9 @@ class _DatePickerState extends State<DatePicker> {
             child: Container(
               decoration: BoxDecoration(
                 color: Colors.white,
-                border:
-                    Border.all(color: Theme.of(context).colorScheme.tertiary),
+                border: Border.fromBorderSide(
+                  BorderSide(color: colorScheme.tertiary),
+                ),
                 borderRadius: containerBorderRadius,
               ),
               child: Row(
@@ -65,7 +69,11 @@ class _DatePickerState extends State<DatePicker> {
                       'assets/icons/date.svg',
                     ),
                   ),
-                  Text(DateFormat('MMM dd, yyyy').format(dateInit)),
+                  Text(
+                    DateFormat('MMM dd, yyyy').format(dateInit),
+                    style: textTheme.bodyMedium
+                        ?.copyWith(color: colorScheme.background),
+                  ),
                 ],
               ),
             ),

@@ -15,13 +15,13 @@ class App extends StatelessWidget {
     ),
     textTheme: TextTheme(
       titleMedium: TextStyle(
-        color: Colors.black,
+        color: Color(0xFF172027),
         fontFamily: 'Roboto-Bold',
         fontSize: 20.0,
         fontWeight: FontWeight.w700,
       ),
       labelMedium: TextStyle(
-        color: Colors.black,
+        color: Color(0xFF172027),
         fontFamily: 'Roboto-Bold',
         fontSize: 16.0,
         fontWeight: FontWeight.w700,
@@ -33,7 +33,7 @@ class App extends StatelessWidget {
         fontWeight: FontWeight.w400,
       ),
       displayMedium: TextStyle(
-        color: Colors.black,
+        color: Color(0xFF172027),
         fontFamily: 'Roboto-Bold',
         fontSize: 14.0,
         fontWeight: FontWeight.w700,
